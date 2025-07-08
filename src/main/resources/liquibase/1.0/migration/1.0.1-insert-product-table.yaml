@@ -1,0 +1,9 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1.0.1-insert-product-table
+      author: vusal-aliyev
+      comment: ms-30/L-15
+      changes:
+        - sqlFile:
+            path: ../data/1.0.0-insert-product-table.sql
+            relativeToChangelogFile: true

@@ -1,0 +1,26 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1.0.4-insert-product-table
+      author: vusal-aliyev
+      changes:
+        - insert:
+            tableName: products
+            columns:
+              - column:
+                  name: product_name
+                  value: 'Sprite'
+              - column:
+                  name: serial_number
+                  value: '8888'
+              - column:
+                  name: quantity
+                  value: 888
+              - column:
+                  name: first_use_date
+                  value: '2023-12-05'
+              - column:
+                  name: last_use_date
+                  value: '2024-12-05'
+              - column:
+                  name: product_type
+                  value: 'DRINK'

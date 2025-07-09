@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-import static az.ingress.enums.ProductMapper.PRODUCT_MAPPER;
+import static az.ingress.mapper.ProductMapper.PRODUCT_MAPPER;
 
 @Service
 @RequiredArgsConstructor

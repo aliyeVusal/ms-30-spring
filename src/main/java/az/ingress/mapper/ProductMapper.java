@@ -1,4 +1,4 @@
-package az.ingress.enums;
+package az.ingress.mapper;
 
 import az.ingress.database.entity.ProductEntity;
 import az.ingress.dto.request.ProductRequestDto;

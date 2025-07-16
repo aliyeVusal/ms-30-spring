@@ -4,6 +4,9 @@ import az.ingress.database.entity.ProductEntity;
 import az.ingress.dto.request.ProductRequestDto;
 import az.ingress.dto.response.ProductResponseDto;
 
+import java.util.List;
+import java.util.Optional;
+
 public enum ProductMapper {
     PRODUCT_MAPPER;
 
@@ -16,7 +19,7 @@ public enum ProductMapper {
                 .firstUseDate(productEntity.getFirstUseDate())
                 .lastUseDate(productEntity.getLastUseDate())
                 .type(productEntity.getType())
-                .isDeleted(productEntity.isDeleted())
+                .status(productEntity.getStatus())
                 .build();
     }
 
@@ -29,8 +32,21 @@ public enum ProductMapper {
                 .firstUseDate(productRequestDto.getFirstUseDate())
                 .lastUseDate(productRequestDto.getLastUseDate())
                 .type(productRequestDto.getType())
-                .isDeleted(productRequestDto.isDeleted())
                 .build();
+    }
+
+    public List<ProductResponseDto> mapEntityListToDtoList(List<ProductEntity> productEntityList) {
+        return productEntityList.stream().map(this::mapEntityToDto).toList();
+    }
+
+    public void setProductEntity(ProductEntity productEntity, ProductRequestDto productRequestDto) {
+        Optional.ofNullable(productRequestDto.getProductName()).ifPresent(productEntity::setProductName);
+        Optional.ofNullable(productRequestDto.getSerialNumber()).ifPresent(productEntity::setSerialNumber);
+        Optional.ofNullable(productRequestDto.getQuantity()).ifPresent(productEntity::setQuantity);
+        Optional.ofNullable(productRequestDto.getFirstUseDate()).ifPresent(productEntity::setFirstUseDate);
+        Optional.ofNullable(productRequestDto.getLastUseDate()).ifPresent(productEntity::setLastUseDate);
+        Optional.ofNullable(productRequestDto.getType()).ifPresent(productEntity::setType);
+        Optional.ofNullable(productRequestDto.getStatus()).ifPresent(productEntity::setStatus);
     }
 
 }

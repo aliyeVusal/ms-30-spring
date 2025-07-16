@@ -1,5 +1,6 @@
 package az.ingress.dto.response;
 
+import az.ingress.enums.ProductStatus;
 import az.ingress.enums.ProductType;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -21,6 +22,6 @@ public class ProductResponseDto {
     private LocalDate firstUseDate;
     private LocalDate lastUseDate;
     private ProductType type;
-    private boolean isDeleted;
+    private ProductStatus status;
 
 }

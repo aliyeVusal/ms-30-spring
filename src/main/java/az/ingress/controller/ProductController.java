@@ -2,7 +2,7 @@ package az.ingress.controller;
 
 import az.ingress.dto.request.ProductRequestDto;
 import az.ingress.dto.response.ProductResponseDto;
-import az.ingress.service.ProductService;
+import az.ingress.service.abstraction.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,12 +24,12 @@ public class ProductController {
 
     private final ProductService productService;
 
-    @GetMapping("id/{id}/product")
+    @GetMapping("/{id}")
     public ProductResponseDto getProduct(@PathVariable Long id) {
         return productService.getProduct(id);
     }
 
-    @GetMapping("product-all")
+    @GetMapping
     public List<ProductResponseDto> getProductAll() {
         return productService.getProductAll();
     }

@@ -1,4 +1,4 @@
-package az.ingress.service;
+package az.ingress.service.abstraction;
 
 import az.ingress.dto.request.ProductRequestDto;
 import az.ingress.dto.response.ProductResponseDto;

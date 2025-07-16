@@ -5,6 +5,7 @@ import az.ingress.enums.ProductType;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.Builder;
+import lombok.ToString;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
@@ -26,6 +27,7 @@ import java.time.LocalDate;
 @Builder
 @EqualsAndHashCode(of = "id")
 @Entity
+@ToString
 @Table(name = "products")
 @NoArgsConstructor
 @AllArgsConstructor

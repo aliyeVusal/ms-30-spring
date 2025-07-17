@@ -36,10 +36,10 @@ public class TransactionsController {
         transactionalService.callRequiresNew(productRequestDto);
     }
 
-    @PostMapping("/test-nested")
+    @PostMapping("/test-support")
     @ResponseStatus(HttpStatus.CREATED)
-    public void callNested(@RequestBody ProductRequestDto productRequestDto) {
-        transactionalService.callNested(productRequestDto);
+    public void callSupport(@RequestBody ProductRequestDto productRequestDto) {
+        transactionalService.callSupport(productRequestDto);
     }
 
 }

@@ -57,10 +57,9 @@ public class TransactionalServiceHandler implements TransactionalService {
 
     @Transactional
     @Override
-    public void callNested(ProductRequestDto productRequestDto) {
-        propagationService.saveWithNested(productRequestDto);
+    public void callSupport(ProductRequestDto productRequestDto) {
+        propagationService.saveWithSupport(productRequestDto);
         productRepository.save(PRODUCT_MAPPER.mapDtoToEntity(productRequestDto));
-        throw new RuntimeException("Nested rollback example");
     }
 
     private List<ProductEntity> findAll() {

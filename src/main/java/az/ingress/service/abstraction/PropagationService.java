@@ -8,6 +8,6 @@ public interface PropagationService {
 
     void saveWithRequiresNew(ProductRequestDto productRequestDto);
 
-    void saveWithNested(ProductRequestDto productRequestDto);
+    void saveWithSupport(ProductRequestDto productRequestDto);
 
 }

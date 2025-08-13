@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1.0.3-rename-column-product-table
+      author: vusal-aliyev
+      changes:
+        - renameColumn:
+            columnDataType: varchar(255)
+            newColumnName: product_name
+            oldColumnName: name
+            tableName: products

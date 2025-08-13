@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1.0.6-create-index-product-table
+      author: vusal-aliyev
+      changes:
+        - createIndex:
+            columns:
+              - column:
+                  name: serial_number
+            indexName: idx_serial_number
+            tableName: products

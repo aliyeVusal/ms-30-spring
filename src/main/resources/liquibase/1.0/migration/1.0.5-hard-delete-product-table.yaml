@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1.0.5-delete-product-table
+      author: vusal-aliyev
+      changes:
+        - delete:
+            tableName: products
+            where: id=3

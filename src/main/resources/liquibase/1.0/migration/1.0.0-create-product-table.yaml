@@ -1,0 +1,37 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1.0.0-create-product-table
+      author: vusal-aliyev
+      comment: ms-30/L-15
+      changes:
+        - createTable:
+            tableName: products
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(255)
+              - column:
+                  name: serial_number
+                  type: varchar(64)
+                  constraints:
+                    unique: true
+                    nullable: false
+              - column:
+                  name: quantity
+                  type: int
+              - column:
+                  name: first_use_date
+                  type: date
+              - column:
+                  name: last_use_date
+                  type: date
+              - column:
+                  name: product_type
+                  type: varchar(64)

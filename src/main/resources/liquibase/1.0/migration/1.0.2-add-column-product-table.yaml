@@ -1,0 +1,12 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1.0.2-add-column-product-table
+      author: vusal-aliyev
+      changes:
+        - addColumn:
+            tableName: products
+            columns:
+              - column:
+                  name: status
+                  type: varchar(8)
+                  defaultValue: 'ACTIVE'
